@@ -1,0 +1,7 @@
+name: Unical Modified Date Recur 
+type: module
+description: Recurring date field.
+core: 8.x
+package: Custom
+dependencies:
+- 'datetime_range'
