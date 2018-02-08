@@ -1,0 +1,199 @@
+// ========================================
+// Event
+// ========================================
+
+.unical-calendar__event {
+  padding: em(60) 0;
+}
+
+  .unical-calendar__event-date {
+    top: em(60);
+
+    span {
+      color: $m2;
+
+      &:first-child {
+        font-family: $serif;
+        font-size: em(20);
+
+        &:after {
+          display: block;
+          height: 1px;
+          width: em(20, 20);
+          content: '';
+          background: #dcdcdc;
+        }
+
+      }
+
+      &:last-child {
+        font-size: em(40);
+        font-weight: bold;
+        line-height: 1.35;
+      }
+
+    }
+
+  }
+
+  .unical-calendar__event-media {
+    margin-top: em(8);
+
+    img {
+      max-width: 100%;
+      width: auto;
+    }
+
+  }
+
+  .unical-calendar__event-content {
+
+    > *:not(.unical-calendar__event-links) {
+
+      @media (min-width: 1000px) {
+        overflow: hidden;
+        width: auto;
+      }
+
+    }
+
+  }
+
+    .unical-calendar__event-title {
+
+      a {
+        color: inherit;
+        font-weight: 700;
+        transition: color .3s;
+
+        &:hover {
+          color: $m1;
+        }
+
+      }
+
+      + p {
+        margin-top: em(10, 18);
+        font-family: $serif;
+        font-size: em(18);
+      }
+
+    }
+
+  .unical-calendar__event-links {
+    margin-top: em(40);
+    margin-left: em(-64);
+
+    @media (max-width: 500px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .unical-calendar__event--spotlight & {
+
+      @media (max-width: 500px) {
+        margin-left: 0;
+      }
+
+    }
+
+    > * {
+
+      @media (max-width: 500px) {
+        flex: 1 auto;
+        margin-right: 1.5%;
+        margin-left: 1.5%;
+        text-align: center;
+      }
+
+      &:nth-child(1) {
+
+        @media (max-width: 500px) {
+          order: 3;
+          width: 47%;
+        }
+
+        .unical-calendar__event--spotlight & {
+
+          @media (max-width: 500px) {
+            width: 100%;
+          }
+
+        }
+
+      }
+
+      &:nth-child(2) {
+
+        @media (max-width: 500px) {
+          order: 2;
+          width: 47%;
+        }
+
+        .unical-calendar__event--spotlight & {
+
+          @media (max-width: 500px) {
+            width: 100%;
+          }
+
+        }
+
+      }
+
+      &:nth-child(3) {
+
+        @media (max-width: 500px) {
+          order: 1;
+          width: 97%;
+        }
+
+      }
+
+    }
+
+  }
+
+  .unical-calendar__event-taxonomy {
+    border-top: 1px solid #dcdcdc;
+    padding: em(70) em(15);
+
+    h3 {
+      color: inherit;
+    }
+
+    a {
+      font-size: em(12);
+      background: #f6f6f6;
+      border-color: #dad3d3;
+      border-radius: em(6, 12);
+      color: $m2;
+    }
+
+  }
+
+  .contact_social {
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+      a {
+        position: relative;
+        display: block;
+        height: em(30);
+        width: em(30);
+        margin-right: em(14);
+        background: $m2;
+        border-radius: 100%;
+        color: #f9f9f9;
+      }
+
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+  }

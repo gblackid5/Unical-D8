@@ -1,0 +1,47 @@
+// ========================================
+// Search
+// ========================================
+
+.unical-calendar__search {
+  background: #f9f9f9;
+}
+
+  .search-form {
+    border: 1px solid #979797;
+    margin-bottom: 0;
+    background: #fff;
+    border-radius: em(10);
+
+    &:after {
+      display: table;
+      clear: both;
+      content: '';
+    }
+
+  }
+
+    .unical-calendar__search-term input,
+    .unical-calendar__search-action button {
+      padding: em(10) em(15);
+    }
+
+    .unical-calendar__search-term {
+
+      input {
+        background: none;
+      }
+
+    }
+
+    .unical-calendar__search-action {
+
+      button {
+        background: none;
+        transition: color .3s;
+
+        &:hover {
+          color: $m1;
+        }
+      }
+
+    }

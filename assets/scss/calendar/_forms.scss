@@ -1,0 +1,170 @@
+// ========================================
+// Submit Event Progress
+// ========================================
+
+.unical-calendar__submit-form-progress {
+  width: auto;
+  padding: 0;
+  float: none;
+  background: $m2;
+  border-radius: em(50);
+  color: #fff;
+
+  li {
+    flex: 1 0 auto;
+    padding: em(5, 10);
+    font-size: em(10);
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: 600px) {
+      font-size: em(14);
+      padding: em(5, 14) em(16, 14);
+    }
+
+  }
+
+}
+
+  .unical-calendar__submit-form-steps {
+    background: $m1;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      height: em(34);
+      width: em(34);
+      content: '';
+      background: $m1;
+      transform:
+        translate(-50%, -50%)
+        rotate(-45deg);
+    }
+
+  }
+
+
+// ========================================
+// Submit Event Form
+// ========================================
+
+.unical-calendar__submit-form {
+
+  section {
+    padding: em(30) em(40) em(40);
+    background: #f1f1f1;
+
+    &:last-child {
+      padding-bottom: em(30);
+      text-align: center;
+
+      p {
+
+        &:first-child {
+          font-size: em(25);
+          font-weight: bold;
+          color: $m2;
+
+          &:before {
+            display: block;
+            height: em(40, 25);
+            margin: 0 auto em(20, 25);
+            content: '';
+            background: url('../images/plus.svg') 50% 50% no-repeat;
+            background-size: contain;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+    [ng-repeat*="taxonomyId"] {
+      margin-bottom: em(20);
+    }
+
+    h4 {
+      margin: 0;
+      font-size: em(25);
+      color: #5F6062;
+    }
+
+    .mini-text {
+      margin-top: em(6, 18);
+      margin-bottom: 0;
+      font-family: $serif;
+      font-size: em(18);
+      font-style: italic;
+      color: #848484;
+    }
+
+    .underline {
+      border-bottom: 1px solid #dcdcdc;
+      margin-bottom: em(40);
+      padding-bottom: em(20);
+    }
+
+    input,
+    select,
+    textarea {
+      border: 1px solid #979797;
+      margin-bottom: em(10);
+      padding: em(14);
+      font-family: 'Open Sans';
+      font-size: em(16);
+      line-height: 1.5;
+      background: #fff;
+      border-radius: em(5);
+
+      &::placeholder {
+        color: #2a6ebb;
+      }
+
+    }
+
+    input {
+      @include checkboxes;
+    }
+
+    select {
+      height: em(54);
+    }
+
+    textarea {
+      min-height: em(130);
+    }
+
+    label {
+      font-weight: normal;
+    }
+
+}
+
+  .unical-calendar__submit-form-controls {
+    text-align: right;
+
+    > * {
+      font-family: 'Open Sans';
+      font-weight: bold;
+      background: $m2;
+      border-radius: em(4);
+      color: #fff;
+
+      &:not([aria-disabled='true']):hover {
+        background: $m1;
+        border-color: $m1;
+      }
+
+    }
+
+    a,
+    button {
+      width: auto;
+      border: 0;
+    }
+
+  }

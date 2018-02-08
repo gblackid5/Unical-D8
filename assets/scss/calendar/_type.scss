@@ -1,0 +1,62 @@
+// ========================================
+// Headings
+// ========================================
+
+h1, h2, h3, h4 {
+  margin: 2.25em 0 1em;
+  color: $m2;
+}
+
+h1 {
+  border: 0;
+  margin: 0;
+  line-height: (40 / 32);
+  text-transform: none;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: em(24);
+  line-height: (32 / 24);
+  text-transform: none;
+  &.archive {
+    color: $m1;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+
+// ========================================
+// Links
+// ========================================
+
+a {
+  color: #2A6EBB;
+  font-weight: 400;
+  transition: color .3s;
+
+  &:hover {
+    color: $m1;
+  }
+
+}
+
+
+// ========================================
+// Paragraphs
+// ========================================
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  font-size: 1em;
+  
+  a {
+    font-size: 1em;
+    font-weight: 400;
+  }
+}

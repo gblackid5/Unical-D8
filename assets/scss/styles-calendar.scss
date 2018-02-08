@@ -1,0 +1,28 @@
+// ========================================
+// Styles Manifest
+// ========================================
+
+@import "mixins/*";
+
+// Define Font Families
+$serif: serif;
+
+// Define Colors
+
+// Main color one
+$m1: #E51937;
+// Main color two
+$m2: #003A63;
+
+// Secondary color one
+$s1: #dcdcdc;
+// Secondary color two
+$s2: #cdcdcd;
+// Secondary color three
+$s3: #979797;
+
+@media screen {
+  .unical-calendar {
+    @import "calendar/*";
+  }
+}

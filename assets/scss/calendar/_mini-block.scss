@@ -1,0 +1,90 @@
+// ========================================
+// Calendar Mini Block
+// ========================================
+
+.unical-calendar__calendar {
+  margin-top: em(40);
+  margin-bottom: em(20);
+}
+
+  .unical-calendar__calendar-controls {
+    font-family: $serif;
+    font-size: em(14);
+    line-height: 1.25;
+    color: $m2;
+
+    @media (min-width: 1200px) {
+      font-size: em(18);
+    }
+
+    .unical-calendar__calendar-previous-button,
+    .unical-calendar__calendar-next-button {
+      padding: em(10, 18) em(20, 18);
+      outline: 0;
+    }
+
+    .month {
+      padding: em(10, 18) 0;
+    }
+
+  }
+
+  .unical-calendar__calendar-grid {
+
+    .days-of-the-week {
+      font-family: $serif;
+      border: 1px solid #e8e8e8;
+      border-bottom: 0;
+      background: #efefef;
+      box-shadow: none;
+    }
+
+      .month {
+        color: $m2;
+      }
+
+      .header-day {
+        border-top: 1px solid #f9f9f9;
+        padding: em(6) 0;
+
+        &:first-child {
+          border-left: 1px solid #f9f9f9;
+        }
+
+        &:last-child {
+          border-right: 1px solid #f9f9f9;
+        }
+
+      }
+
+      .days {
+        border-top: 0;
+        border-left-color: #e8e8e8;
+      }
+
+        .day {
+          border-color: #e8e8e8;
+          padding: em(5) 0;
+        }
+
+          .event-indicator {
+
+            &:after {
+              top: auto;
+              bottom: 0;
+              height: 1px;
+              background: currentColor;
+              transition: background .2s;
+            }
+
+            &:hover {
+
+              &:after {
+                background: $m1;
+              }
+
+            }
+
+          }
+
+  }

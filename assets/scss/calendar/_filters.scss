@@ -1,0 +1,106 @@
+// ========================================
+// Filters
+// ========================================
+
+.unical-calendar__filters {
+  margin: 0 em(-40);
+
+  .unical-calendar__filters {
+    margin: 0;
+    padding-bottom: em(30);
+
+    label {
+      position: relative;
+      padding: em(4) em(40);
+      font-weight: normal;
+    }
+
+    input {
+      @include checkboxes
+    }
+
+  }
+
+}
+
+  .unical-calendar__filters-toggle {
+    margin: 0;
+    font-size: 1em;
+
+    label {
+      display: block;
+      position: relative;
+      font-size: em(22);
+      line-height: 1.25;
+      padding: em(18, 22) em(40, 22);
+      padding-right: em(70, 22);
+      color: $m2;
+
+       &:after {
+        position: absolute;
+        top: 50%;
+        right: (40 / 16 * 1rem);
+        font-size: 125%;
+        transform: translate(0, -50%);
+      }
+
+    }
+
+    &.\+negative label {
+      padding-right: 0;
+      padding-left: 0;
+      text-transform: uppercase;
+      background: none;
+      color: inherit;
+
+      &:after {
+        right: 0;
+      }
+
+    }
+
+      input {
+        position: absolute;
+      }
+
+  }
+
+  .unical-calendar__filters-help {
+    margin-bottom: em(20);
+    padding: 0 em(40, 13.65);
+    text-align: left;
+  }
+
+  .unical-calendar__filters-custom-range {
+
+    input {
+      border: 1px solid #979797;
+      font-family: 'Open Sans';
+      font-size: em(16);
+      padding: em(6) em(14);
+      line-height: 1.5;
+      background: #fff;
+      border-radius: em(5);
+    }
+
+    p {
+      margin-right: em(40);
+      margin-left: em(40);
+      background: #e8e8e8;
+      border-radius: em(5);
+      color: rgba(#000, .15);
+
+      &.enabled {
+        background: $m1;
+        color: #fff;
+        transition: background .3s;
+
+        &:hover {
+          background: $m2;
+        }
+
+      }
+
+    }
+
+  }
