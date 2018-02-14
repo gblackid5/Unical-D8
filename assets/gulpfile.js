@@ -2,17 +2,18 @@
 // Required plugins
 // ========================================
 
-var gulp = require('gulp'),
-    plugins = require('gulp-load-plugins')(),
-    templateCache = require('gulp-angular-templatecache'),
-    include = require('gulp-include'),
-    uglify = require('gulp-uglify');
+// Plugin declarations
+var gulp = require('gulp');
+// https://www.npmjs.com/package/gulp-load-plugins
+var plugins = require('gulp-load-plugins')();
 
 
 // ========================================
-// Paths
+// Set Paths
 // ========================================
 
+// Variable declarations
+// http://www.mikestreety.co.uk/blog/an-advanced-gulpjs-file
 var paths = {
   scss: {
     src:  'assets/scss/**/*.scss',
@@ -42,38 +43,11 @@ gulp.task('compile-sass', function() {
       console.error('Error!', err.message);
     })
     .pipe(plugins.autoprefixer({
-      browsers: ['last 2 versions'],
+      browsers: ['last 10 versions'],
       cascade: false
     }))
-    .pipe(gulp.dest(paths.scss.dest));
-});
-
-
-// ========================================
-// Compile templates
-// ========================================
-
-gulp.task('compile-templates', function () {
-  return gulp.src('app/templates/**/*.html')
-    .pipe(templateCache({
-      module: 'calendar',
-      root: 'templates'
-    }))
-    .pipe(gulp.dest('app/'));
-});
-
-
-// ========================================
-// Compile js
-// ========================================
-
-gulp.task('compile-js', function() {
-  return gulp.src('unical.js')
-    .pipe(include())
-    .pipe(uglify({
-      mangle: false
-    }))
-    .pipe(gulp.dest('./app/build'));
+    .pipe(gulp.dest(paths.scss.dest))
+    .pipe(plugins.livereload());
 });
 
 
@@ -81,10 +55,11 @@ gulp.task('compile-js', function() {
 // Create Watch Task
 // ========================================
 
+// Defines all the tasks which run when 'gulp watch' is executed
+// This task is executed by default when 'gulp' is executed
 gulp.task('watch', function() {
+  plugins.livereload.listen();
   gulp.watch(paths.scss.src, ['compile-sass']);
-  gulp.watch('app/templates/**/*.html', ['compile-templates']);
-  gulp.watch(['unical.js', 'app/**/*.js', '!app/build/*.js'], ['compile-js']);
 });
 
 
@@ -92,4 +67,5 @@ gulp.task('watch', function() {
 // Default 'gulp' task
 // ========================================
 
-gulp.task('default', ['compile-templates', 'compile-sass', 'compile-js', 'watch']);
+// Defines all the tasks which run when 'gulp' is executed
+gulp.task('default', ['compile-sass', 'watch']);

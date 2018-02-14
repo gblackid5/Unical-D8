@@ -1,0 +1,27 @@
+
+unical.events_controller_events:
+  path: 'api/events/{id}'
+  defaults:
+    _controller: '\Drupal\unical\Controller\eventsController::events'
+    id: '0'
+    _title: 'events'
+  requirements:
+    _permission: 'access content'
+
+unical.site_controller_site:
+  path: 'api/sites/{id}'
+  defaults:
+    _controller: '\Drupal\unical\Controller\siteController::site'
+    id: '0'
+    _title: 'site'
+  requirements:
+    _permission: 'access content'
+
+unical.taxonomy_controller_taxonomy:
+  path: 'api/{id}'
+  defaults:
+    _controller: '\Drupal\unical\Controller\taxonomyController::taxonomy'
+    id: 'taxonomy_0'
+    _title: 'taxonomy'
+  requirements:
+    _permission: 'access content'

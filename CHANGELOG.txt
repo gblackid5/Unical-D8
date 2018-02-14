@@ -1,0 +1,91 @@
+Version 1.6 (2017-08-24)
+=============
+- bugify 11289: Pull in vocabulary weight into the ordering of uncial filters. Order of filters in uncial list, and archive views now order by weight of the associated vocabulary.
+- bugify 11189: Make the RSVP text customizable.
+- bugify 11060: Add loading animation. Added loading animation, as well as ability to override load screen. Also added hooks for any custom JS to fire on uncial events.
+- bugify 11186: Add “edit this event” button to events, for admin users. Now shows “edit this event” in sidebar of detail page to users with “edit any event content” permissions.
+- bugify 11145: Add button to clear search. Simply set the reset filters button to show when searching.
+- bugify 11187: Separate out contact between individual and web.
+- bugify 11190: Allow zoom specificity on location map.
+- bugify 11188: Allow lat/lng as option for location map.
+
+new fields added:
+
+event CT
+- field_rsvp_text
+- field_map_zoom
+- field_map_center_lat
+- field_map_center_lng
+
+Version 1.2 (2017-05-09)
+=============
+- Add taxonomies to unical, giving a total of 10 editable taxonomies per install.
+- Add endpoints for new taxonomies, calendar_taxonomy_8 through 11.
+- Fix calls in taxonomies service to fail gracefully.
+- Fix Sites API to check if field exists first.
+- Add default terms to calendar_taxonomy_7 in unical_features, to ensure they make
+  it into fresh installs.
+- Add dependencies to unical_features, to accomplish above.
+- Adjust/Fix fields on unical_features to incorporate new taxonomies, as well as
+  generalize some default settings.
+- Update documentation.
+
+Lots of effort was made to test that there are no breaking changes for backwards
+compatability. That being said, if you wish to add the new taxonomies to a previous
+install, you will need to either re-enable unical_features, or look to the following:
+- Ensure calendar_taxonomy_8 through 11 are added.
+- Ensure field taxonomy_8 through 11 are added to the event CT.
+- Ensure fields mirroring taxonomy_1 are added for taxonomy_8 through 11 ie:
+  (field_taxonomy_8_enabled, field_taxonomy_8_label, field_taxonomy_8) for 8-11.
+
+In testing, re-enabling unical_features added the new fields/taxonomies, while leaving
+changed/overridden fields in place. You will, however, need to manually re-arrange
+the site and event CT's to clean up. TEST ON STG ENV FIRST!
+
+Version 1.1
+=============
+- Minor edits to module call
+
+Version 1.0
+=============
+- Initial release
+
+Version 0.1.1
+=============
+- Add changelog
+
+Version 0.1.2
+=============
+- Remove debug button from event submit form
+- Remove "required" dependency from price description on event submit form
+- Remove hard-coded form submit URL
+
+Version 0.1.3 - February 9, 2016
+================================
+- Display "All Day" text for all day events instead of time
+
+Version 0.1.4 - February 12, 2016
+=================================
+- Add "back to calendar" link to detail page
+- Event website link now outputs as "Event website"
+- Show\hide repeating event dates
+
+Version 0.1.5 - February 15, 2016
+=================================
+- Text modification for image uploads
+
+Version 0.1.6 - February 18, 2016
+=================================
+- Add custom text area to show above sidebar
+
+Version 0.1.6 - February 19, 2016
+=================================
+- Add ability to expire repeting event dates
+
+Version 0.1.7 - February 22, 2016
+=================================
+- Add error function and timeout to event submit
+
+Version 0.1.8 - February 23, 2016
+=================================
+- Show validation errors on final form step
